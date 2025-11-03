@@ -13,19 +13,12 @@ n archivos CSV en el directorio 'data'.
 También genera y muestra gráficos de volatilidad y rentabilidad acumulada.
 """
 
-from functions import get_total_rank
-import pandas_datareader.data as web
-from datetime import datetime, date
 import matplotlib.pyplot as plt
-import yfinance as yf
 import pandas as pd
-from tqdm import tqdm
-import numpy as np
-import statsmodels.api as sm
 import os
 
-from stock_code.functions import call_yf_api_historic, extraction_historic, analysis_stock_hist, save_extraction_historic_parquet, get_total_rank
-from stock_code.variables import ibex35_tickers, tickers_sp500, start_period, end_period, DATA_DIR, tickers_index
+from etl.functions import call_yf_api_historic, extraction_historic, analysis_stock_hist, save_extraction_historic_parquet, get_total_rank
+from etl.variables import ibex35_tickers, tickers_sp500, start_period, end_period, DATA_DIR, tickers_index
 
 # Configuración de Pandas
 pd.set_option('display.max_columns', None)
